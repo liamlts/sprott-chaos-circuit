@@ -5,19 +5,19 @@ oscilloscope, compared with a model that has nothing fitted. Data, analysis code
 
 I TA an electronics lab course and wanted a chaotic circuit that students could build and measure. I'd built a
 Chua circuit first. It worked, but a touch, a loose contact or a 1X probe could kill the double scroll. Sprott's
-circuit has one diode and no trimmer, so I built that instead, and with the diode freshly seated it matched the
+circuit has one diode and no trimmer, so I built that instead. With the diode freshly seated, it matches the
 model to about 3 %. What surprised me was that the same board, with the same parts, showed three different states
-on the same day, and each change came right after I'd pulled the diode out and put it back.
-
-![Density of (x, x′) on the board and in the model](figures/fig_talk_board_model.png)
-*Where the circuit spends its time in the (x, x′) plane: my board (left) and the model (right), with no
-parameters fitted. Darker means more time.*
+in one day, and each change came right after I'd pulled the diode out and put it back.
 
 - **[Build it yourself](docs/build.md):** schematic, parts, a check after each stage, what you should see on the
   scope, and what to do when it doesn't work.
 - **[Results in detail](docs/results.md):** everything I measured and what it means
   (also as a [PDF](writeup/sprott_writeup.pdf), 13 pages).
 - **Talk for a general audience:** [`talk/Chaos_on_a_breadboard.pdf`](talk/Chaos_on_a_breadboard.pdf).
+
+![Density of (x, x′) on the board and in the model](figures/fig_talk_board_model.png)
+*Where the circuit spends its time in the (x, x′) plane: my board (left) and the model (right), with no
+parameters fitted. Darker means more time.*
 
 ## The circuit
 
@@ -117,7 +117,8 @@ python3 sprott_scope_analysis.py data/sprott_myrun_*.h5
 ## License
 
 Code is under the MIT license ([`LICENSE`](LICENSE)). Text, figures, drawings and data are under CC BY 4.0
-([`LICENSE-docs`](LICENSE-docs)).
+([`LICENSE-docs`](LICENSE-docs)). To cite it, use "Cite this repository" on the GitHub page
+([`CITATION.cff`](CITATION.cff)).
 
 ## References
 

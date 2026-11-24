@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite it as below."
+title: "Chaos on a breadboard: Sprott's diode jerk circuit"
+abstract: >-
+  Measurements of Sprott's (2011) diode jerk circuit, built on a breadboard and recorded with a USB
+  oscilloscope, compared with a model that has nothing fitted. Build guide, data, analysis code and figures.
+authors:
+  - family-names: Schmidt
+    given-names: Liam
+date-released: 2026-11-24
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/liamlts/sprott-chaos-circuit"
+keywords:
+  - chaos
+  - nonlinear dynamics
+  - jerk circuit
+  - electronics
+  - Lyapunov exponent
+references:
+  - type: article
+    title: "A New Chaotic Jerk Circuit"
+    authors:
+      - family-names: Sprott
+        given-names: J. C.
+    journal: "IEEE Transactions on Circuits and Systems II: Express Briefs"
+    volume: 58
+    start: 240
+    end: 243
+    year: 2011
+    doi: 10.1109/TCSII.2011.2124490
