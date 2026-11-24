@@ -1,0 +1,13 @@
+Copyright (c) 2026 Liam Schmidt
+
+The text, figures, drawings and data in this repository are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0). This covers
+docs/, writeup/sprott_writeup.pdf, figures/, data/, talk/, and the PDF and PNG
+drawings in hardware/.
+
+You may share and adapt them for any purpose, as long as you give appropriate
+credit, link to the license, and say if you made changes.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+The code (all .py, .sh, .tex and .lua files) is under the MIT license in LICENSE.

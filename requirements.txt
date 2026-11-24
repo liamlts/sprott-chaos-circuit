@@ -1,0 +1,10 @@
+numpy
+scipy
+matplotlib
+h5py
+scienceplots
+cmcrameri
+# only for recording from the scope (sprott_scope.py)
+pyvisa
+pyvisa-py
+pyusb

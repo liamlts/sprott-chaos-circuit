@@ -1,0 +1,17 @@
+{
+ "run": "sprott_after_swaps_20261119_181028.h5",
+ "n_maxima_board": 1849,
+ "n_maxima_model": 7601,
+ "maxima_per_100ms_board": 18.49,
+ "maxima_per_100ms_model": 19.0025,
+ "median_board": 0.5558333333333334,
+ "median_model": 0.5267222222222222,
+ "q01_q99_board": [
+  0.24013333333333334,
+  0.5938333333333334
+ ],
+ "q01_q99_model": [
+  0.24222222222222223,
+  0.5585185185185184
+ ]
+}

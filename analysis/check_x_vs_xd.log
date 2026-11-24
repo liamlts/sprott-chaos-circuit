@@ -1,0 +1,17 @@
+bands (Hz): [(60, 90), (90, 120), (120, 160), (160, 200), (200, 250)]
+A (D1, 13:46)        k_ols 1.002 k_rev 1.432 r 0.837 | lag -0.12 ms (r 0.846) | |H| 0.79 0.95 1.13 1.05 1.11  ph +2 +6 +10 +1 +3 | a 0.434 b 0.758 c +59 mV
+A (D1, rep1)         k_ols 0.997 k_rev 1.418 r 0.839 | lag -0.12 ms (r 0.848) | |H| 0.79 0.96 1.14 1.04 1.07  ph +4 +6 +8 +0 +2 | a 0.445 b 0.763 c +57 mV
+A (1N4148 #2)        k_ols 1.006 k_rev 1.433 r 0.838 | lag -0.12 ms (r 0.845) | |H| 0.76 0.96 1.15 1.05 1.15  ph +4 +7 +10 +1 +1 | a 0.459 b 0.768 c +62 mV
+A (1N4004)           k_ols 1.001 k_rev 1.457 r 0.829 | lag -0.12 ms (r 0.840) | |H| 0.74 0.92 1.12 1.06 1.22  ph +4 +5 +10 +4 +0 | a 0.450 b 0.751 c +47 mV
+B (D1 reseated)      k_ols 1.050 k_rev 1.057 r 0.997 | lag +0.00 ms (r 0.997) | |H| 1.05 1.05 1.05 1.05 1.05  ph -0 -0 +0 +0 +0 | a 0.942 b 1.025 c +10 mV
+C (reseated again)   k_ols 0.992 k_rev 1.005 r 0.994 | lag +0.00 ms (r 0.994) | |H| 0.99 0.99 0.99 0.99 0.99  ph -0 -0 +0 +0 -0 | a 0.967 b 1.052 c +4 mV
+Ge (0.2 V/div)       k_ols 0.935 k_rev 1.165 r 0.896 | lag -0.12 ms (r 0.906) | |H| 0.91 0.94 0.94 0.88 1.15  ph -3 +4 +2 -5 +1 | a 0.192 b 0.266 c -15 mV
+A (D1, 13:46)        clamped  3.7 % of time,  47.0 /s, median 0.76 ms | Ch2 then 0.067 V, true x' 0.58 | I to N1 at Ch2 top 0.5 %:  372 uA (Ch2 0.605 V)
+A (D1, rep1)         clamped  3.6 % of time,  48.9 /s, median 0.68 ms | Ch2 then 0.070 V, true x' 0.58 | I to N1 at Ch2 top 0.5 %:  376 uA (Ch2 0.604 V)
+A (1N4148 #2)        clamped  3.9 % of time,  47.6 /s, median 0.76 ms | Ch2 then 0.072 V, true x' 0.57 | I to N1 at Ch2 top 0.5 %:  367 uA (Ch2 0.599 V)
+A (1N4004)           clamped  3.8 % of time,  50.2 /s, median 0.68 ms | Ch2 then 0.058 V, true x' 0.57 | I to N1 at Ch2 top 0.5 %:  326 uA (Ch2 0.569 V)
+B (D1 reseated)      clamped  0.0 % of time,   0.0 /s, median 0.00 ms | Ch2 then nan V, true x' nan | I to N1 at Ch2 top 0.5 %:  475 uA (Ch2 0.620 V)
+C (reseated again)   clamped  0.0 % of time,   0.8 /s, median 0.04 ms | Ch2 then -0.097 V, true x' 0.11 | I to N1 at Ch2 top 0.5 %:  445 uA (Ch2 0.621 V)
+Ge (0.2 V/div)       clamped  1.0 % of time,  30.9 /s, median 0.36 ms | Ch2 then -0.072 V, true x' 0.27 | I to N1 at Ch2 top 0.5 %:  146 uA (Ch2 0.243 V)
+model + noise        k_ols 0.999 k_rev 1.007 r 0.996 | lag +0.00 ms (r 0.996) | |H| 1.00 1.00 1.00 1.00 1.00  ph -0 -0 +0 +0 -0 | a 0.918 b 0.969 c +12 mV
+model + noise        clamped  0.0 % of time,   0.0 /s, median 0.00 ms | Ch2 then nan V, true x' nan | I to N1 at Ch2 top 0.5 %:  409 uA (Ch2 0.581 V)

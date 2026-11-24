@@ -1,0 +1,79 @@
+% Schematic of Sprott's diode jerk circuit as built (Sprott 2011, Fig. 1).
+% Same nets as EXPECTED in sprott_build.py. make_schematic.sh turns it into PDF and PNG.
+\documentclass[border=8pt]{standalone}
+\usepackage[american]{circuitikz}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{circuitikz}[font=\small]
+\ctikzset{bipoles/length=1.1cm}
+
+% the four op-amp stages
+\node[op amp] (A1) at (0,0) {};
+\node[op amp] (A2) at (5.6,0) {};
+\node[op amp] (A3) at (11.2,0) {};
+\node[op amp] (A4) at (11.2,-4.2) {};
+\node at (A1) {\footnotesize U1B};
+\node at (A2) {\footnotesize U1A};
+\node at (A3) {\footnotesize U2A};
+\node at (A4) {\footnotesize U2B};
+
+% pin numbers (TL082)
+\foreach \a/\m/\p/\o in {A1/6/5/7, A2/2/3/1, A3/2/3/1, A4/6/5/7} {
+  \node[font=\scriptsize, above right, inner sep=1pt] at (\a.-) {\m};
+  \node[font=\scriptsize, below right, inner sep=1pt] at (\a.+) {\p};
+  \node[font=\scriptsize, above left, inner sep=1pt] at (\a.out) {\o};
+}
+
+% non-inverting inputs to ground
+\foreach \a in {A1, A2, A3, A4} {
+  \draw (\a.+) -- ++(-0.3,0) -- ++(0,-0.4) node[ground] {};
+}
+
+% summing nodes, one per stage
+\coordinate (N1) at ($(A1.-)+(-0.9,0)$);
+\coordinate (N2) at ($(A2.-)+(-0.9,0)$);
+\coordinate (N3) at ($(A3.-)+(-0.9,0)$);
+\coordinate (N4) at ($(A4.-)+(-0.9,0)$);
+\foreach \n/\a in {N1/A1, N2/A2, N3/A3, N4/A4} { \draw (\n) -- (\a.-); }
+
+% heights of the feedback parts and the return wires
+\coordinate (yC) at (0,1.5);
+\coordinate (yR) at (0,2.8);
+\coordinate (yTop) at (0,4.0);
+\coordinate (yInv) at (0,-2.6);
+\coordinate (yBot) at (0,-5.8);
+
+% integrator 1: C1 and R4 (damping) from x'' back to N1
+\draw (N1) to[short, *-] (N1 |- yC) to[C, l=$C_1$] (A1.out |- yC) -- (A1.out);
+\draw (N1 |- yC) to[short, *-] (N1 |- yR) to[R, l=$R_4$] (A1.out |- yR) to[short, -*] (A1.out |- yC);
+
+% integrator 2: x'' -> -x'
+\draw (A1.out) to[short, *-] ++(0.5,0) coordinate (xdd) node[above right] {$x''$}
+      |- ($(N2)+(-1.6,0)$) to[R, l=$R_2$] (N2);
+\draw (N2) to[short, *-] (N2 |- yC) to[C, l=$C_2$] (A2.out |- yC) -- (A2.out);
+
+% integrator 3: -x' -> x
+\draw (A2.out) to[short, *-] ++(0.5,0) coordinate (mxd) node[above right] {$-x'$}
+      |- ($(N3)+(-1.6,0)$) to[R, l=$R_3$] (N3);
+\draw (N3) to[short, *-] (N3 |- yC) to[C, l=$C_3$] (A3.out |- yC) -- (A3.out);
+
+% inverter: -x' -> x'
+\draw (mxd) to[short, *-] (mxd |- N4) to[R, l=$R_5$] (N4);
+\draw (N4) to[short, *-] (N4 |- yInv) to[R, l=$R_6$] (A4.out |- yInv) -- (A4.out);
+
+% x back to R1 along the top; Channel 1 on x
+\draw (A3.out) to[short, *-] ++(0.5,0) coordinate (xo) node[below right] {$x$}
+      -- (xo |- yTop) -- ($(N1 |- yTop)+(-2.2,0)$) |- ($(N1)+(-2.2,0)$) to[R, l=$R_1$] (N1);
+\draw (xo) to[short, *-o] ++(1.0,0) node[right] {Ch 1};
+
+% x' back to D1 along the bottom; Channel 2 on x'
+\draw (A4.out) to[short, *-] ++(0.5,0) coordinate (xdo) node[above right] {$x'$}
+      -- (xdo |- yBot) -- ($(N1 |- yBot)$) to[D, l=$D_1$] (N1);
+\draw (xdo) to[short, *-o] ++(1.0,0) node[right] {Ch 2};
+
+% values and power
+\node[align=left, anchor=north west, font=\footnotesize] at (-2.8,-6.3)
+  {$R_1$--$R_6$ = 10\,k$\Omega$ \quad $C_1$--$C_3$ = 100\,nF film \quad $D_1$ = 1N4148 \quad U1, U2 = TL082\\
+   Both chips: pin 8 to +9\,V, pin 4 to $-$9\,V, each supply pin with a 10--100\,nF bypass capacitor to ground.};
+\end{circuitikz}
+\end{document}

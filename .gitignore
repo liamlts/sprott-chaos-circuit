@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+.ruff_cache/
+# simulation caches and run logs; analysis/run_all.sh rebuilds them
+analysis/cache/
+analysis/logs/
+# quick-look previews written next to every figure
+*_preview.png
+# LaTeX leftovers
+*.aux
+*.out

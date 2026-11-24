@@ -1,0 +1,49 @@
+=== rep1 start 14:02:22
+  20/200 captures, 52 s
+  40/200 captures, 108 s
+  60/200 captures, 164 s
+  80/200 captures, 219 s
+  100/200 captures, 274 s
+  120/200 captures, 329 s
+  140/200 captures, 384 s
+  160/200 captures, 439 s
+  180/200 captures, 494 s
+  200/200 captures, 550 s
+saved 200 captures -> data/sprott_R4_10030_rep1_20261119_140223.h5
+=== rep2 start 14:11:44
+  20/200 captures, 53 s
+  40/200 captures, 108 s
+  60/200 captures, 163 s
+  80/200 captures, 217 s
+  100/200 captures, 273 s
+  120/200 captures, 328 s
+  140/200 captures, 382 s
+  160/200 captures, 437 s
+  180/200 captures, 492 s
+  200/200 captures, 548 s
+saved 200 captures -> data/sprott_R4_10030_rep2_20261119_141144.h5
+=== rep3 start 14:21:02
+  20/200 captures, 52 s
+  40/200 captures, 108 s
+  60/200 captures, 162 s
+  80/200 captures, 217 s
+  100/200 captures, 272 s
+  120/200 captures, 327 s
+  140/200 captures, 382 s
+  160/200 captures, 437 s
+  180/200 captures, 492 s
+  200/200 captures, 547 s
+saved 200 captures -> data/sprott_R4_10030_rep3_20261119_142103.h5
+=== tdiv25 start 14:30:20
+  20/200 captures, 56 s
+  40/200 captures, 114 s
+  60/200 captures, 171 s
+  80/200 captures, 229 s
+  100/200 captures, 287 s
+  120/200 captures, 345 s
+  140/200 captures, 402 s
+  160/200 captures, 460 s
+  180/200 captures, 518 s
+  200/200 captures, 575 s
+saved 200 captures -> data/sprott_R4_10030_tdiv25_20261119_143021.h5
+=== all done 14:40:06

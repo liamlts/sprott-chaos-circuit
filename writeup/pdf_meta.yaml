@@ -1,0 +1,11 @@
+# pandoc settings for the PDF version of docs/results.md (the title is the page's first heading)
+author: Liam Schmidt
+date: November 2026
+geometry: margin=2.2cm
+fontsize: 10pt
+mainfont: Palatino
+monofont: Menlo
+colorlinks: true
+header-includes:
+  - \usepackage{etoolbox}
+  - \AtBeginEnvironment{longtable}{\small}
